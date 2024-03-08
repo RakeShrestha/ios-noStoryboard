@@ -92,5 +92,12 @@ extension LoginViewController {
         if loginView.usernameTextField.text == "" || loginView.passwordTextField.text == "" {
             errorTextLabel.isHidden = false
         }
+        else if loginView.usernameTextField.text == "rakesh" || loginView.passwordTextField.text == "1234567" {
+            // logged in
+        }
+        else {
+            errorTextLabel.isHidden = false
+            errorTextLabel.text = "Incorrect username or password"
+        }
     }
 }
