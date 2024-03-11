@@ -7,6 +7,8 @@
 
 import UIKit
 
+let appColor: UIColor = .systemTeal
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
 
@@ -30,7 +32,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         onboardingContainerViewController.delegate = self
         logoutViewController.logoutDelegate = self
         
-        window?.rootViewController = loginViewController
+        window?.rootViewController = MainViewController()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
