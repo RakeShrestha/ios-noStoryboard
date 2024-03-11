@@ -7,6 +7,14 @@
 
 import UIKit
 
+protocol LoginViewControllerDelegate: AnyObject {
+    func didLogin()
+}
+
+protocol LogOutDelegate: AnyObject {
+    func didLogout()
+}
+
 class LoginViewController: UIViewController {
     
     let loginView = LoginView()
@@ -14,6 +22,8 @@ class LoginViewController: UIViewController {
     let descriptionText = UILabel()
     let titleText = UILabel()
     let errorTextLabel = UILabel()
+    
+    weak var delegate: LoginViewControllerDelegate?
     
 
     override func viewDidLoad() {
@@ -24,8 +34,14 @@ class LoginViewController: UIViewController {
         layout()
     }
 
+//    override func viewDidDisappear(_ animated: Bool) {
+//        super.viewDidDisappear(animated)
+//        signInButton.configuration?.showsActivityIndicator = false
+//    }
 
 }
+
+
 
 extension LoginViewController {
     private func style() {
@@ -94,6 +110,7 @@ extension LoginViewController {
         }
         else if loginView.usernameTextField.text == "rakesh" || loginView.passwordTextField.text == "1234567" {
             // logged in
+            delegate?.didLogin()
         }
         else {
             errorTextLabel.isHidden = false

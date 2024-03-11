@@ -12,8 +12,8 @@ class OnboardingViewController: UIViewController {
     let stackView = UIStackView()
     let imageView = UIImageView()
     let label = UILabel()
-    var heroImageName: String?
-    var titleText: String?
+    let heroImageName: String?
+    let titleText: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()

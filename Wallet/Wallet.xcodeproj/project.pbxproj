@@ -13,7 +13,9 @@
 		1128ECC42B9864F400CEAF53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1128ECC32B9864F400CEAF53 /* Assets.xcassets */; };
 		1128ECC72B9864F400CEAF53 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1128ECC62B9864F400CEAF53 /* Base */; };
 		1128ECD12B9867F000CEAF53 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128ECD02B9867F000CEAF53 /* LoginView.swift */; };
+		112DAABE2B9EC4C7006A8E75 /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DAABD2B9EC4C7006A8E75 /* LocalState.swift */; };
 		114CB7852B98AF3C0024DD2C /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114CB7842B98AF3C0024DD2C /* OnboardingContainerViewController.swift */; };
+		115A8EA52B9D8B730019666F /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115A8EA42B9D8B730019666F /* LogoutViewController.swift */; };
 		11EA8C182B9ACE4D00FA388B /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EA8C172B9ACE4D00FA388B /* OnboardingViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +28,9 @@
 		1128ECC62B9864F400CEAF53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1128ECC82B9864F400CEAF53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1128ECD02B9867F000CEAF53 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		112DAABD2B9EC4C7006A8E75 /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
 		114CB7842B98AF3C0024DD2C /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
+		115A8EA42B9D8B730019666F /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
 		11EA8C172B9ACE4D00FA388B /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +64,7 @@
 		1128ECB92B9864F200CEAF53 /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
+				112DAABC2B9EC4AF006A8E75 /* Utils */,
 				114CB7832B98AF110024DD2C /* Onboarding */,
 				1128ECCE2B98672600CEAF53 /* Files */,
 				1128ECCF2B9867C300CEAF53 /* Login */,
@@ -84,8 +89,17 @@
 			children = (
 				1128ECBE2B9864F200CEAF53 /* LoginViewController.swift */,
 				1128ECD02B9867F000CEAF53 /* LoginView.swift */,
+				115A8EA42B9D8B730019666F /* LogoutViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		112DAABC2B9EC4AF006A8E75 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				112DAABD2B9EC4C7006A8E75 /* LocalState.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		114CB7832B98AF110024DD2C /* Onboarding */ = {
@@ -170,9 +184,11 @@
 				1128ECBF2B9864F200CEAF53 /* LoginViewController.swift in Sources */,
 				11EA8C182B9ACE4D00FA388B /* OnboardingViewController.swift in Sources */,
 				1128ECBB2B9864F200CEAF53 /* AppDelegate.swift in Sources */,
+				115A8EA52B9D8B730019666F /* LogoutViewController.swift in Sources */,
 				1128ECD12B9867F000CEAF53 /* LoginView.swift in Sources */,
 				114CB7852B98AF3C0024DD2C /* OnboardingContainerViewController.swift in Sources */,
 				1128ECBD2B9864F200CEAF53 /* SceneDelegate.swift in Sources */,
+				112DAABE2B9EC4C7006A8E75 /* LocalState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
