@@ -16,7 +16,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     let loginViewController = LoginViewController()
     let onboardingContainerViewController = OnboardingContainerViewController()
-    let logoutViewController = LogoutViewController()
     let mainViewController = MainViewController()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -31,9 +30,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         loginViewController.delegate = self
         onboardingContainerViewController.delegate = self
-        logoutViewController.logoutDelegate = self
         
-        window?.rootViewController = AccountSummaryViewController()
+        let vc = mainViewController
+        vc.setStatusBar()
+
+        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().backgroundColor = appColor
+            
+        window?.rootViewController = vc
+            
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -72,7 +77,7 @@ extension SceneDelegate: LoginViewControllerDelegate, OnboardingContainerViewCon
     func didLogin() {
         print("Did login")
         if LocalState.hasOnboarded{
-            setRootViewController(logoutViewController)
+            setRootViewController(mainViewController)
         }
         else{
             setRootViewController(onboardingContainerViewController)
@@ -81,7 +86,7 @@ extension SceneDelegate: LoginViewControllerDelegate, OnboardingContainerViewCon
     
     func didFinishOnboarding() {
         LocalState.hasOnboarded = true
-        setRootViewController(logoutViewController)
+        setRootViewController(mainViewController)
     }
     
     func didLogout() {
