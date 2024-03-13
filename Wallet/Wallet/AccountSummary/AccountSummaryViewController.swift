@@ -30,6 +30,7 @@ extension AccountSummaryViewController {
         tableView.backgroundColor = appColor
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.bounces = false
         
         tableView.register(AccountSummaryCell.self, forCellReuseIdentifier: AccountSummaryCell.reuseID)
         tableView.rowHeight = AccountSummaryCell.rowHeight

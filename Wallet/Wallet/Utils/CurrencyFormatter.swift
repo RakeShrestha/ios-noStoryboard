@@ -67,10 +67,11 @@ struct CurrencyFormatter {
         let dollarSignAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.preferredFont(forTextStyle: .callout), .baselineOffset: 8]
         let dollarAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.preferredFont(forTextStyle: .title1)]
         let centAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.preferredFont(forTextStyle: .callout), .baselineOffset: 8]
+        let currencySymbol = Locale.current.currencySymbol!
         
-        let rootString = NSMutableAttributedString(string: "$", attributes: dollarSignAttributes)
+        let rootString = NSMutableAttributedString(string: currencySymbol + " ", attributes: dollarSignAttributes)
         let dollarString = NSAttributedString(string: dollars, attributes: dollarAttributes)
-        let centString = NSAttributedString(string: cents, attributes: centAttributes)
+        let centString = NSAttributedString(string: " ." + cents, attributes: centAttributes)
         
         rootString.append(dollarString)
         rootString.append(centString)
