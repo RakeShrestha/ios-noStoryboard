@@ -105,10 +105,11 @@ extension LoginViewController {
     }
     
     @objc func signInTapped() {
+//        if loginView.usernameTextField.text == "" || loginView.passwordTextField.text == "" {
+//            errorTextLabel.isHidden = false
+//        }
+//        else
         if loginView.usernameTextField.text == "" || loginView.passwordTextField.text == "" {
-            errorTextLabel.isHidden = false
-        }
-        else if loginView.usernameTextField.text == "rakesh" || loginView.passwordTextField.text == "1234567" {
             // logged in
             delegate?.didLogin()
         }
